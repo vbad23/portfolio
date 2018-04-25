@@ -1,0 +1,95 @@
+html {
+  height: 100%;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  font-size: 30px;
+  color: rgb(226, 232, 237);
+  margin: 0px;
+  height: 100%;
+}
+
+p {
+  margin: 0;
+}
+
+.bg {
+  background-image: url("images/traverse.jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  position: fixed;
+  bottom: 20px;
+  background-color: rgba(0, 0, 0, 0.4);
+  flex-direction: row;
+}
+
+.initials {
+  position: fixed;
+  font-family: 'Permanent Marker', cursive;
+  width: 50px;
+  border: solid 2px rgb(226, 232, 237);
+  margin: 24px;
+  padding: 3px;
+  box-shadow: none;
+}
+
+.initials:hover {
+  border-radius: 100px;
+  transition: 0.5s;
+}
+
+.item {
+  text-align: center;
+  vertical-align: middle;
+  line-height: 50px;
+  height: 50px;
+  transition: 0.5s;
+}
+
+.item:hover {
+  color: #000;
+  background-color: rgb(226, 232, 237);
+  transition: 0.5s;
+}
+
+.menu {
+  width: 100%;
+  margin-right: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.menu .item {
+  padding: 30px;
+  border: solid 2px rgb(226, 232, 237, 0);
+  width: 200px;
+}
+
+.full-name {
+  font-family: 'Khand', sans-serif;
+  color: rgba(226, 232, 237, 0.2);
+  font-size: 84px;
+  height: 50px;
+  margin-top: 292px;
+  margin-left: -276px;
+  float: left;
+  transform: rotate(-90deg);
+}
+
+.about-info {
+  display: flex;
+  width: 500px;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  border: 2px solid rgb(226, 232, 237);
+}
