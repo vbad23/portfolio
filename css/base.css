@@ -6,7 +6,7 @@ body {
   font-family: 'Raleway', sans-serif;
   font-size: 30px;
   color: #e2e8ed;
-  margin: 0px;
+  margin: 0;
   height: 100%;
   background-color: black;
 }
@@ -15,7 +15,7 @@ p {
   margin: 0;
 }
 
-.bg {
+.background {
   background-image: url("../images/traverse.jpg");
   height: 100%;
   background-position: center;
@@ -35,7 +35,7 @@ p {
   }
 }
 
-.content {
+.foreground {
   z-index: 0;
   position: fixed;
   top: 0;
@@ -98,6 +98,7 @@ p {
 }
 
 .menu .item {
+  flex: 1;
   padding: 30px;
   border: solid 2px rgba(226, 232, 237, 0);
   width: 200px;
@@ -109,7 +110,7 @@ p {
   float: left;
   transform: rotate(-90deg);
   opacity: 0;
-  transition: 0.7s;
+  transition: all 1s;
 }
 
 .first {
@@ -140,6 +141,38 @@ p {
   align-items: center;
   padding: 5px;
   border: 2px solid #e2e8ed;
+}
+
+.about-section {
+  position: fixed;
+  display: flex;
+  left: 33%;
+  flex-direction: column;
+}
+
+.studio-image {
+  width: 600px;
+  height: 400px;
+  padding: 20px;
+  background-image: url("../images/studio.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.text {
+  position: fixed;
+  padding: 20px;
+  left: 40%;
+  top: 40%;
+  margin-right: 10%;
+  background-color: rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  border-radius: 20px;
+  animation-duration: 3s;
+  animation-name: slidein;
+  opacity: 0;
+  transition: 1s;
 }
 
 .copyright {

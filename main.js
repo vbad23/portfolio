@@ -2,6 +2,30 @@
 var d = new Date();
 var year = (d.getFullYear()).toString();
 
+function showAbout() {
+  $(".about-text").css("opacity", "1");
+}
+
+function showWebsites() {
+  $(".websites-text").css("opacity", "1");
+}
+
+function showGithub() {
+  $(".github-text").css("opacity", "1");
+}
+
+function hideAbout() {
+  $(".about-text").css("opacity", "0");
+}
+
+function hideWebsites() {
+  $(".websites-text").css("opacity", "0");
+}
+
+function hideGithub() {
+  $(".github-text").css("opacity", "0");
+}
+
 // On load
 $( document ).ready(function() {
   $(".copyright").text("Copyright © " + year + " Vikram Badarinath - All Rights Reserved.");
@@ -15,13 +39,34 @@ $( document ).ready(function() {
 
   // Blur background on click
   $(".item").click(function() {
-    $(".bg").css("background-image", 'url("images/traverse-bw.jpg")');
-    $(".bg").css("filter", "blur(5px)");
+    $(".background").css("background-image", 'url("images/traverse-bw.jpg")');
+    $(".background").css("filter", "blur(5px)");
+  });
+
+  $("#about").click(function() {
+    showAbout();
+    hideWebsites();
+    hideGithub();
+  });
+
+  $("#websites").click(function() {
+    hideAbout();
+    showWebsites();
+    hideGithub();
+  });
+
+  $("#github").click(function() {
+    hideAbout();
+    hideWebsites();
+    showGithub();
   });
 
   // Resets background when initials are clicked
   $(".initials").click(function() {
-    $(".bg").css("background-image", 'url("images/traverse.jpg")');
-    $(".bg").css("filter", "blur(0px)");
+    $(".background").css("background-image", 'url("images/traverse.jpg")');
+    $(".background").css("filter", "blur(0px)");
+    hideAbout();
+    hideWebsites();
+    hideGithub();
   });
 });

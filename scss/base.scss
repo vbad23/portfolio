@@ -1,5 +1,21 @@
+// Variables
 $text-color: rgb(226, 232, 237);
+$shade: rgba(0, 0, 0, 0.4);
+$box-dim: 80px;
+$mobile: 480px;
+$tablet: 768px;
 
+@mixin mobile {
+  @media (min-width: $mobile) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media (min-width: $tablet) {
+    @content;
+  }
+}
+// Element styling
 html {
   height: 100%;
 }
@@ -8,7 +24,7 @@ body {
   font-family: 'Raleway', sans-serif;
   font-size: 30px;
   color: $text-color;
-  margin: 0px;
+  margin: 0;
   height: 100%;
   background-color: rgb(0, 0, 0);
 }
@@ -16,8 +32,8 @@ body {
 p {
   margin: 0;
 }
-
-.bg {
+// Main classes
+.background {
   background-image: url("../images/traverse.jpg");
   height: 100%;
   background-position: center;
@@ -29,11 +45,16 @@ p {
 }
 
 @keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
-.content {
+.foreground {
   z-index: 0;
   position: fixed;
   top: 0;
@@ -46,13 +67,12 @@ p {
   display: flex;
   position: fixed;
   bottom: 30px;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: $shade;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
 }
 
-$box-dim: 80px;
 .initials {
   font-family: 'Permanent Marker', cursive;
   font-size: 50px;
@@ -97,25 +117,23 @@ $box-dim: 80px;
   justify-content: flex-end;
 
   .item {
+    flex: 1;
     padding: 30px;
     border: solid 2px rgba(226, 232, 237, 0);
     width: 200px;
   }
 }
-
 // full name styling
-
 .name {
   position: fixed;
   font-family: 'Khand', sans-serif;
   float: left;
   transform: rotate(-90deg);
   opacity: 0;
-  transition: 0.7s;
+  transition: all 1s;
 }
 
 .first {
-
   color: rgba(226, 232, 237, 0.3);
   font-size: 180px;
   height: 50px;
@@ -132,8 +150,8 @@ $box-dim: 80px;
 }
 
 .name:hover {
-    color: rgba(226, 232, 237, 1);
-    transition: 2s;
+  color: rgba(226, 232, 237, 1);
+  transition: 2s;
 }
 
 .about-info {
@@ -143,6 +161,38 @@ $box-dim: 80px;
   align-items: center;
   padding: 5px;
   border: 2px solid rgb(226, 232, 237);
+}
+
+.about-section {
+  position: fixed;
+  display: flex;
+  left: 33%;
+  flex-direction: column;
+}
+
+.studio-image {
+  width: 600px;
+  height: 400px;
+  padding: 20px;
+  background-image: url("../images/studio.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.text {
+  position: fixed;
+  padding: 20px;
+  left: 40%;
+  top: 40%;
+  margin-right: 10%;
+  background-color: $shade;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  border-radius: 20px;
+  animation-duration: 3s;
+  animation-name: slidein;
+  opacity: 0;
+  transition: 1s;
 }
 
 .copyright {
