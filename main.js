@@ -1,6 +1,6 @@
 
 var d = new Date();
-var year = d.getFullYear();
+var year = (d.getFullYear()).toString();
 
 // On load
 $( document ).ready(function() {
@@ -15,13 +15,13 @@ $( document ).ready(function() {
 
   // Blur background on click
   $(".item").click(function() {
-    $(".bg").css("background-image", 'url("../images/traverse-bw.jpg")');
+    $(".bg").css("background-image", 'url("images/traverse-bw.jpg")');
     $(".bg").css("filter", "blur(5px)");
   });
 
   // Resets background when initials are clicked
   $(".initials").click(function() {
-    $(".bg").css("background-image", 'url("../images/traverse.jpg")');
+    $(".bg").css("background-image", 'url("images/traverse.jpg")');
     $(".bg").css("filter", "blur(0px)");
   });
 });
