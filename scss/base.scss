@@ -1,0 +1,157 @@
+$text-color: rgb(226, 232, 237);
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  font-size: 30px;
+  color: $text-color;
+  margin: 0px;
+  height: 100%;
+  background-color: rgb(0, 0, 0);
+}
+
+p {
+  margin: 0;
+}
+
+.bg {
+  // position: fixed;
+  background-image: url("../images/traverse.jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: fadein 2s;
+  transition: 1s;
+  z-index: -1;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+.content {
+  z-index: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+// header bar styling
+
+.header {
+  width: 100%;
+  display: flex;
+  position: fixed;
+  bottom: 30px;
+  background-color: rgba(0, 0, 0, 0.4);
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+$box-dim: 80px;
+.initials {
+  font-family: 'Permanent Marker', cursive;
+  font-size: 50px;
+  text-align: center;
+  min-width: $box-dim;
+  min-height: $box-dim;
+  line-height: $box-dim;
+  border: solid 2px $text-color;
+  transition: 1s;
+  opacity: 0.5;
+  margin-left: 15px;
+}
+
+.initials:hover {
+  opacity: 1;
+  border-radius: 100px;
+  transition: 1s;
+  color: rgb(0, 0, 0);
+  background-color: $text-color;
+}
+
+.item {
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  transition: 0.5s;
+  opacity: 0.5;
+}
+
+.item:hover {
+  color: $text-color;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: 0.5s;
+  opacity: 1;
+}
+
+.menu {
+  margin-right: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-end;
+
+  .item {
+    padding: 30px;
+    border: solid 2px rgba(226, 232, 237, 0);
+    width: 200px;
+  }
+}
+
+// full name styling
+
+.name {
+  position: fixed;
+  font-family: 'Khand', sans-serif;
+  float: left;
+  transform: rotate(-90deg);
+  opacity: 0;
+  transition: 0.7s;
+}
+
+.first {
+
+  color: rgba(226, 232, 237, 0.3);
+  font-size: 180px;
+  height: 50px;
+  margin-top: 430px;
+  margin-left: -226px;
+}
+
+.last {
+  color: rgba(226, 232, 237, 0.5);
+  font-size: 84px;
+  height: 50px;
+  margin-top: 252px;
+  margin-left: -30px;
+}
+
+.name:hover {
+    color: rgba(226, 232, 237, 1);
+    transition: 2s;
+}
+
+.about-info {
+  display: flex;
+  width: 500px;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  border: 2px solid rgb(226, 232, 237);
+}
+
+.copyright {
+  width: 100%;
+  padding-left: 15px;
+  text-align: center;
+  position: fixed;
+  font-size: 14px;
+  opacity: 0.5;
+  bottom: 8px;
+}
